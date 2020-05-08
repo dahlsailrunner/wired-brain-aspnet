@@ -1,0 +1,20 @@
+{
+  "WarnOnly": true,
+  "ErrorSettings": {
+    "ErrorSeverityThreshold": 5,
+    "CVSS3Threshold": -1,
+    "IgnoredPackages": [
+      {
+        "Id": "NugetDefense",
+        "Version": null,
+        "PackageUrl": "pkg:nuget/NugetDefense@"
+      },
+      { "Id": "bootstrap" }
+    ],
+    "IgnoredCvEs": [],
+    "WhiteListedPackages": [],
+    "BlackListedPackages": []
+  },
+  "OssIndex": {},
+  "NVD": {}
+}

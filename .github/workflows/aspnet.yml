@@ -32,9 +32,11 @@ jobs:
     
     - name: Restore npm packages
       run: npm install
+      working-directory: ./WiredBrain.CustomerPortal.AspNet
    
     - name: npm Security Audit
       run: npm audit --audit-level=high
+      working-directory: ./WiredBrain.CustomerPortal.AspNet
           
     - name: Build and Publish Web App
       run: msbuild WiredBrain.CustomerPortal.AspNet.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile

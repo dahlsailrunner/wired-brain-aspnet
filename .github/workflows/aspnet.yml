@@ -24,7 +24,18 @@ jobs:
      
     - name: Restore NuGet Packages
       run: nuget restore WiredBrain.CustomerPortal.AspNet.sln
- 
+    
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v1.4.2
+      with:
+        node-version: 12.16.3
+    
+    - name: Restore npm packages
+      run: npm install
+   
+    - name: npm Security Audit
+      run: npm audit --audit-level=high
+          
     - name: Build and Publish Web App
       run: msbuild WiredBrain.CustomerPortal.AspNet.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
  
